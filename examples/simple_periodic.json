@@ -1,0 +1,21 @@
+{
+        /*
+         * Simple use case which creates a thread that run 2ms then sleep 8ms
+         * for 10 seconds
+         */
+        "tasks" : {
+                "thread0" : {
+                        "loop" : -1,
+                        "runtime" : 20000,
+                        "timer"   : { "ref" : "unique", "period" : 80000, "mode" : "absolute" }
+                }
+        },
+        "global" : {
+                "duration" : 10,
+                "calibration" : 10,
+                "default_policy" : "SCHED_OTHER",
+                "logdir" : "./",
+		"ftrace" : "main,task,loop,event",
+                "log_basename" : "rt-app1"
+        }
+}

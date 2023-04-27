@@ -64,7 +64,7 @@ static pthread_mutex_t joining_mutex;
 static pthread_mutex_t fork_mutex;
 
 static ftrace_data_t ft_data = {
-	.debugfs = "/sys/kernel/debug",
+	.debugfs = "/host/sys/kernel/debug",
 	.marker_fd = -1,
 };
 
